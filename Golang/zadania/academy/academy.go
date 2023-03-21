@@ -3,10 +3,10 @@ package academy
 import "math"
 
 type Student struct {
-	Name      string
-	Grades    []int
-	Project   int
-	Attendace []bool
+	Name       string
+	Grades     []int
+	Project    int
+	Attendance []bool
 }
 
 // AverageGrade returns an average grade given a
@@ -30,8 +30,7 @@ func AverageGrade(grades []int) int {
 // whether a student was present (true) of absent (false).
 //
 // The percentage of attendance is represented as a
-// floating-point number ranging from  0 to 1,
-// with 2 digits of precision.
+// floating-point number ranging from 0 to 1.
 func AttendancePercentage(attendance []bool) float64 {
 	if len(attendance) == 0 {
 		return 0
