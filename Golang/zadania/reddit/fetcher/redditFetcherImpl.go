@@ -105,7 +105,6 @@ func (reddit *RedditFetcherImpl) fetchSubreddit(ctx context.Context, wg *sync.Wa
 	reddit.data[sub] = parsed
 
 	logger.Printf("%s %s", logPrefix, color.HiRedString("Data fetch finished"))
-	wg.Done()
 
 	return nil
 }
