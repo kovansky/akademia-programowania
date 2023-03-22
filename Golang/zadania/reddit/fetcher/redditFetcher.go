@@ -1,8 +1,11 @@
 package fetcher
 
 import (
+	"context"
 	"io"
 )
+
+const CtxLoggerKey = "RDF_LOGGER"
 
 type response struct {
 	Data struct {
@@ -16,6 +19,6 @@ type response struct {
 }
 
 type RedditFetcher interface {
-	Fetch() error
+	Fetch(context.Context) error
 	Save(io.Writer) error
 }
